@@ -1,0 +1,123 @@
+//1.
+println("1. Verifique solo número Par.")
+1. Verifique solo número Par.
+
+scala> def ParoNo(n: Int):Boolean={
+     | if(n % 2==0){
+     | return true
+     | }
+     | return false
+     | }
+ParoNo: (n: Int)Boolean
+
+scala> ParoNo(2)
+res0: Boolean = true
+
+scala> ParoNo(3)
+res1: Boolean = false
+
+scala> println("Vea si puedo escribir esto en linea")
+Vea si puedo escribir esto en linea
+
+//2.
+println("2. Ver numeros pares en la lista.")
+2. Ver numeros pares en la lista.
+
+scala> def parList (n: Int): Boolean={
+     | if(n %2 ==0){
+     | return true
+     | }
+     | return false
+     | }
+parList: (n: Int)Boolean
+
+scala> var lis= List(2,4,5,6,7,13,3)
+lis: List[Int] = List(2, 4, 5, 6, 7, 13, 3)
+
+scala> var A=0
+A: Int = 0
+
+scala> for(A <-lis){
+     | if(A <=A){
+     | print("El resultado " + A + " es:")
+     | println(parList(A))
+     | }
+     | }
+El resultado 2 es:true
+El resultado 4 es:true
+El resultado 5 es:false
+El resultado 6 es:true
+El resultado 7 es:false
+El resultado 13 es:false
+El resultado 3 es:false
+
+//3.
+scala> println("3. Afortunado numero 7.")
+3. Afortunado numero 7.
+
+scala> val afo=List(7,7)
+afo: List[Int] = List(7, 7)
+
+scala> def afo(num :List[Int]): Int={
+     | var sum=0
+     | for(n <-num){
+     | if(n==7){
+     | sum +=n*2
+     | }else {
+
+     | sum +=n
+     | }
+     | }
+     | return sum
+     | }
+afo: (num: List[Int])Int
+
+scala> val R=List(1,7,7)
+R: List[Int] = List(1, 7, 7)
+
+// 1 + 7(2) + 7(2)=29
+scala> afo(R)
+res6: Int = 29
+
+//4.
+scala> println("4. ¿Puedes equilibrar?")
+4. ¿Puedes equilibrar?
+
+scala> def Eq(Ya: List[Int]): Boolean={
+     | val(num1, num2)=Ya.splitAt(Ya.length/2)
+     | if(num1.sum == num2.sum){
+     | return true }
+     | else return false }
+Eq: (Ya: List[Int])Boolean
+
+scala> val List1=List(7,3,4)
+List1: List[Int] = List(7, 3, 4)
+
+scala> val List2=List(3,4)
+List2: List[Int] = List(3, 4)
+
+scala> Eq(List1)
+res9: Boolean = true
+
+scala> Eq(List2)
+res10: Boolean = false
+
+//5.
+scala> println("5. Verificar palindromo.")
+Verificar palindromo
+
+scala> def pul(x:String):Boolean={
+     | return(x==x.reverse)}
+pul: (x: String)Boolean
+
+scala> pul("oso")
+res11: Boolean = true
+
+scala> pul("hola")
+res12: Boolean = false
+
+scala> pul("oxxo")
+res13: Boolean = true
+
+scala> pul("tienda")
+res14: Boolean = false
